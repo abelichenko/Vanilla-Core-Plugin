@@ -1,0 +1,48 @@
+name: Vanilla-Core
+version: 1.0
+main: ua.whoami.vanilla.core.CorePlugin
+api-version: 1.16
+authors: [MrNesot]
+
+commands:
+  sethome:
+    description: Установить точку дома
+    usage: /sethome <название>
+  delhome:
+    description: Удалить точку дома
+    usage: /delhome <название>
+  home:
+    description: Телепортироваться к дому
+    usage: /home
+  m:
+    description: Отправить личное сообщение
+    usage: /m <ник> <сообщение>
+    aliases: [ message ]
+  r:
+    description: Ответить на последнее сообщение
+    usage: /r <сообщение>
+    aliases: [ reply ]
+  mt:
+    description: Включить/выключить получение сообщений
+    usage: /mt [ник|всем]
+    aliases: [ messagetoggle ]
+
+permissions:
+  playerhomes.sethome:
+    description: Разрешает использовать команду /sethome
+    default: true
+  playerhomes.delhome:
+    description: Разрешает использовать команду /delhome
+    default: true
+  playerhomes.home:
+    description: Разрешает использовать команду /home
+    default: true
+  playerhomes.maxhomes.*:
+    description: Дает неограниченное количество домов
+    default: op
+  playerhomes.message:
+    description: Разрешает отправлять личные сообщения
+    default: true
+  playerhomes.messagetoggle:
+    description: Разрешает отключать получение сообщений
+    default: true
